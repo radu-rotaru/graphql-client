@@ -1,0 +1,45 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\rotra\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @vue/apollo-composable@4.0.0-alpha.12
+
+PATH: 
+  C:\Program Files\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Program Files\cmder\vendor\conemu-maximus5;C:\Program Files\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files\Common Files\Oracle\Java\javapath;C:\app\Radu\product\11.2.0\dbhome_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\nodejs\;C:\Users\rotra\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\rotra\AppData\Local\Programs\Python\Python39\;C:\Users\rotra\AppData\Local\Microsoft\WindowsApps;C:\Users\rotra\AppData\Local\atom\bin;C:\Users\rotra\AppData\Roaming\cabal\bin;C:\tools\ghc-9.0.1\bin;C:\tools\msys64;C:\Users\rotra\.dotnet\tools;C:\Users\rotra\AppData\Local\Programs\Microsoft VS Code\bin;C:\mingw-w64-v9.0.0;C:\Program Files\Azure Data Studio\bin;C:\Users\rotra\AppData\Roaming\npm;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files\cmder\vendor\bin;C:\Program Files\cmder
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Learn_Vue\GraphQL-Course\ClientRepo\graphql-client\node_modules\esbuild-windows-64\esbuild.exe'
+
+npm manifest: 
+  {
+    "name": "vite-app",
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "serve": "vite preview"
+    },
+    "dependencies": {
+      "@apollo/client": "^3.5.4",
+      "@rollup/plugin-graphql": "^1.1.0",
+      "graphql": "^15.3.0",
+      "graphql-tag": "^2.12.6",
+      "vue": "^3.2.16"
+    },
+    "devDependencies": {
+      "@vitejs/plugin-vue": "^1.9.3",
+      "vite": "^2.6.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

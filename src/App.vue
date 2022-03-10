@@ -4,7 +4,7 @@
     <p v-if="loading">Loading...</p>
     <p v-else-if="error">Something went wrong! Please try again</p>
     <template v-else>
-      <p v-for="book in result.allBooks" :key="book.id">
+      <p v-for="book in books" :key="book.id">
         {{ book.title }}
       </p>
     </template>
@@ -13,18 +13,27 @@
 
 <script>
 import { ref } from 'vue'
-import { useQuery } from '@vue/apollo-composable'
+import { useQuery, useResult } from '@vue/apollo-composable'
 import ALL_BOOKS_QUERY from './graphql/allBooks.query.gql'
 
 export default {
   name: 'App',
   setup() {
     const searchTerm = ref('')
-    const { result, loading, error } = useQuery(ALL_BOOKS_QUERY, () => ({ 
+    const { result, loading, error } = useQuery(
+      ALL_BOOKS_QUERY, 
+      () => ({ 
       search: searchTerm.value 
-    }))
+      }),
+      () => ({
+        debounce: 500,
+        enabled: searchTerm .value.length > 2
+      })
+    )
 
-    return { result, searchTerm, loading, error }
+    const books = useResult(result, [], data => data.allBooks)
+
+    return { books, searchTerm, loading, error }
   },
 }
 </script>
